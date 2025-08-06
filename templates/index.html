@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Assistant</title>
+    <title>Konsultasi Pertanian Cabai Rawit</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="chat-container">
-        <div class="background-wrapper">
-            <div class="chat-header">
-                <h1>Konsultasi Pertanian Cabai Rawit</h1>
-            </div>
-            
-            <div class="suggestions-container">
-                <div class="suggestions-header">
-                    <h3>Rekomendasi apa yang ditanyakan</h3>
-                    <button id="refresh-suggestions" class="refresh-btn" title="Load more suggestions">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="suggestion-buttons" id="suggestion-buttons">
-                    <!-- Suggestions will be loaded dynamically here -->
-                </div>
-            </div>
+        <div class="chat-header">
+            <h1>Konsultasi Pertanian Cabai Rawit</h1>
         </div>
-            
-            <div class="chat-messages" id="chat-messages">
-                <!-- Messages will appear here -->
+        
+        <div class="chat-body" id="chat-body">
+            <!-- Pesan akan muncul di sini -->
+        </div>
+        
+        <div class="chat-footer">
+            <div class="suggestions">
+                <button class="suggestion-btn">Apa nama ilmiah ulat grayak?</button>
+                <button class="suggestion-btn">Di mana ulat ini biasanya berkumpul?</button>
+                <button class="suggestion-btn">Apa ciri khas serangan ulat grayak?</button>
+                <button class="suggestion-btn">Kapan serangan ini terutama terjadi?</button>
             </div>
-            
-            <div class="chat-input">
-                <input type="text" id="user-input" placeholder="Ketik pesan di sini...">
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ketik pertanyaan Anda...">
                 <button id="send-btn">Kirim</button>
             </div>
         </div>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
